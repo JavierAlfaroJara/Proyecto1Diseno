@@ -1,0 +1,51 @@
+.header{
+    padding: auto;
+    display: flex;
+    margin: 1rem;
+      
+}
+.navbar{
+    justify-content: space-between;
+}
+
+span{
+    padding: 1rem;    
+}
+.searchContainer{
+    
+    width: 1277px;
+    height: 800px;
+    margin: 1rem;  
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    background-image: url(../../images/backgroundMain.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color:white !important;
+    font-size: 22px;
+   }
+  
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color:white !important;
+    
+  } 
+  
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: white !important;;
+   color: black;
+  }
+::ng-deep.mat-form-field-empty.mat-form-field-label {
+    color:black;
+    font-size: 16px;
+}
+
+
+
