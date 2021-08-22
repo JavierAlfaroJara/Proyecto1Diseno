@@ -1,17 +1,22 @@
-<div class="header">
-   <mat-toolbar color="primary" class="navbar">
-       <div>ArtistInfo</div>
-       <div>
-           <span>Home</span>
-           <span>About</span>
-           <span>Services</span>
-       </div>
-   </mat-toolbar>
-</div>
-
-<div class="searchContainer" >
-    
-    <mat-form-field class="searchArtist"> 
-        <input matInput type = "text "  [(ngModel)]  = "search" class="searchArtist">
-    </mat-form-field>    
-</div>
+<body>
+    <div class="header">
+        <mat-toolbar color="primary" class="navbar">
+            <div>ArtistInfo</div>
+            <div>
+                <span>Home</span>
+                <span>About</span>
+                <span>Services</span>
+            </div>
+        </mat-toolbar>
+     </div>
+     <div class="Container">
+         <div class="inputSearch">
+             <mat-form-field class="searchArtist"> 
+                 <input matInput type = "text " placeholder="Busca información acerca de tus artistas favoritos" [(ngModel)]  = "search" class="searchArtist">
+             </mat-form-field>
+             <mat-icon id="webInfo">help</mat-icon>
+         </div> 
+     </div>
+     <button mat-button class="searchButtom" (click)= "searchArtist()">Buscar</button>   
+     
+</body>

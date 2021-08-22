@@ -25,6 +25,9 @@ import { MatInputModule } from '@angular/material/input';
 /*Componentes  */
 import { MainComponent } from './Components/main/main.component';
 
+/** Http */
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -51,6 +54,8 @@ import { MainComponent } from './Components/main/main.component';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
