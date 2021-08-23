@@ -1,0 +1,25 @@
+.header{
+    padding: auto;
+    display: flex;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+body{
+    background-image: url(../../../images/backgroundMain.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -100;
+    margin: -20px;
+}
+.goBack{
+    border-radius: 8px;
+    margin-left: auto;
+}
+.mat-card{
+    margin: 20px;
+    opacity: 80%;
+}
+.mat-card:hover{
+    opacity: 100%;
+}

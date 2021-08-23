@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 /*Angular Material */
@@ -27,6 +28,11 @@ import { MainComponent } from './Components/main/main.component';
 
 /** Http */
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './Components/info/home/home.component';
+import { GeneralInfoComponent } from './Components/info/general-info/general-info.component';
+import { AlbumesComponent } from './Components/info/albumes/albumes.component';
+import { FotosComponent } from './Components/info/fotos/fotos.component';
+import { DiscografiaComponent } from './Components/info/discografia/discografia.component';
 
 
 
@@ -35,6 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     MainComponent,
+    HomeComponent,
+    GeneralInfoComponent,
+    AlbumesComponent,
+    FotosComponent,
+    DiscografiaComponent,
 
   ],
   imports: [
@@ -55,6 +66,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,
+    MatTabsModule,
     HttpClientModule,
   ],
   providers: [],

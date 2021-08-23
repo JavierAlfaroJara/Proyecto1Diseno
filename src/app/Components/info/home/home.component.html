@@ -1,0 +1,30 @@
+<body>
+    <div class="header">
+        <mat-toolbar color="primary" class="navbar">
+            <div style="margin-left: 43%;">Información del artista</div>
+            <button mat-button class="goBack" (click)="retornar()" routerLink="/info" routerLinkActive="active">Regresar</button>
+        </mat-toolbar>
+     </div>
+
+     <mat-card>
+        <mat-tab-group animationDuration="1000ms" mat-align-tabs="center">
+          
+          <mat-tab label="Información general">
+            <app-general-info></app-general-info>
+          </mat-tab>
+      
+          <mat-tab label="Albumes">
+            <app-albumes></app-albumes>
+          </mat-tab>
+      
+          <mat-tab label="Fotos">
+            <app-fotos></app-fotos>
+          </mat-tab>
+      
+          <mat-tab label="Discografía">
+            <app-discografia></app-discografia>
+          </mat-tab>
+      
+        </mat-tab-group>
+      </mat-card>
+</body>

@@ -1,21 +1,11 @@
 <body>
-    <div class="header">
-        <mat-toolbar color="primary" class="navbar">
-            <div>ArtistInfo</div>
-            <div>
-                <span style="cursor:pointer">Home</span>
-                <span style="cursor:pointer">About</span>
-            </div>
-        </mat-toolbar>
-     </div>
-     <div class="Container">
+    <div class="Container">
          <div class="inputSearch">
-             <mat-form-field class="searchArtist"> 
+             <mat-form-field class="searchArtist" appearance="fill"> 
                  <input matInput type = "text " placeholder="Busca información acerca de tus artistas favoritos" [(ngModel)]  = "search" class="searchArtist">
              </mat-form-field>
              <mat-icon id="webInfo" style="cursor:pointer">help</mat-icon>
          </div> 
-     </div>
-     <button mat-button class="searchButtom" (click)= "searchArtist()">Buscar</button>   
-     
+    </div>
+    <button mat-button class="searchButtom" (click)= "searchArtist()">Buscar</button>   
 </body>
