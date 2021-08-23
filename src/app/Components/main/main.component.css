@@ -28,7 +28,7 @@ span{
 }
 .inputSearch{
     width: 60%; 
-    margin: 3rem;  
+    margin-left: 5%;  
     display:flex;
     align-items: center;
     justify-content: center; 
@@ -40,7 +40,7 @@ span{
 .searchButtom{
     background-color: black;
     color:white;
-    margin-left: 23.5%;
+    margin-left:45%;
 }   
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -51,17 +51,18 @@ span{
   
 ::ng-deep.mat-form-field-underline {
     /*change color of underline*/
-    background-color:black !important;
+    background-color:white !important;
+    width: 30%;
     
   } 
   
 ::ng-deep.mat-form-field-ripple {
    /*change color of underline when focused*/
    background-color: white !important;;
-   color: black;
+   color: white;
   }
 ::ng-deep.mat-form-field-empty.mat-form-field-label {
-    color:black;
+    color:white;
     font-size: 16px;
 }
 
