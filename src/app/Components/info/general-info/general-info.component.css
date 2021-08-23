@@ -1,0 +1,19 @@
+.centrado{
+    width: 100%;
+    text-align-last: center;
+}
+
+.informacion{
+    text-align-last: center;
+    color: black;
+    text-align: -webkit-center;
+    margin-bottom: 20px;
+}
+
+.example-full-width-center {
+    width: 22%;
+    float:none;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+}

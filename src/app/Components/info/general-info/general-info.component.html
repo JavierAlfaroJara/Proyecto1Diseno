@@ -1,1 +1,36 @@
-<p>general-info works!</p>
+<br>
+<div class="centrado">
+    <img src={{imagenLink}} alt="">
+</div>
+<br>
+<div class="centrado">
+
+    <mat-form-field  class="example-full-width-center" appearance="fill">
+        <mat-label>Nombre del artista</mat-label>
+        <input matInput value={{nombre}} disabled="enable">
+    </mat-form-field>
+
+    <mat-form-field  class="example-full-width-center" appearance="fill">
+        <mat-label>Estilo</mat-label>
+        <input matInput value={{estilo}} disabled="enable">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="!esBanda" class="example-full-width-center" appearance="fill">
+        <mat-label>Género</mat-label>
+        <input matInput value={{genero}} disabled="enable">
+    </mat-form-field>  
+
+    <mat-form-field  class="example-full-width-center" appearance="fill">
+        <mat-label>Año de formación</mat-label>
+        <input matInput value={{annoFormacion}} disabled="enable">
+    </mat-form-field>
+
+</div>
+<br>
+<div>
+    <div class="centrado">
+        <div class="informacion">
+            {{about}}
+        </div>
+    </div>
+</div>

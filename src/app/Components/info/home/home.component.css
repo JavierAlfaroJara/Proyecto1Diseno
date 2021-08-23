@@ -6,11 +6,14 @@
 }
 
 body{
-    background-image: url(../../../images/backgroundMain.jpg);
+    background-color: blueviolet;
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: -100;
     margin: -20px;
+}
+footer{
+    background-color: blueviolet;
 }
 .goBack{
     border-radius: 8px;
@@ -18,8 +21,4 @@ body{
 }
 .mat-card{
     margin: 20px;
-    opacity: 80%;
-}
-.mat-card:hover{
-    opacity: 100%;
 }
