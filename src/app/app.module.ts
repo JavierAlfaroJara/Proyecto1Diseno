@@ -30,7 +30,6 @@ import { MainComponent } from './Components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Components/info/home/home.component';
 import { GeneralInfoComponent } from './Components/info/general-info/general-info.component';
-import { AlbumesComponent } from './Components/info/albumes/albumes.component';
 import { FotosComponent } from './Components/info/fotos/fotos.component';
 import { DiscografiaComponent } from './Components/info/discografia/discografia.component';
 
@@ -43,7 +42,6 @@ import { DiscografiaComponent } from './Components/info/discografia/discografia.
     MainComponent,
     HomeComponent,
     GeneralInfoComponent,
-    AlbumesComponent,
     FotosComponent,
     DiscografiaComponent,
 
