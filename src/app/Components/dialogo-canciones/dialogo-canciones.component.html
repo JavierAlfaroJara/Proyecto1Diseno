@@ -1,1 +1,14 @@
-<p>dialogo-canciones works!</p>
+<div id="div1">
+    <mat-table [dataSource]="dataSource" matSort >
+
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> <span>Canciones del álbum:</span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+</div>
