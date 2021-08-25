@@ -1,1 +1,43 @@
-<p>discografia works!</p>
+<div class="card">
+    <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8
+      lessons-table">
+
+      <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> <span>Nombre del album</span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="anno">
+        <mat-header-cell *matHeaderCellDef> <span >Año de lanzamiento</span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.anno}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="genero">
+        <mat-header-cell *matHeaderCellDef> <span >Género musical</span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.genero}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef style="border-bottom-right-radius:
+          5px; border-top-right-radius: 5px;">
+          <span class="labels">Acciones</span>
+        </mat-header-cell>
+        <mat-cell class="flex-center" *matCellDef="let element">
+
+            <button mat-raised-button color="primary" (click)="openDialogInfo(element.idAlbum)">Canciones</button>
+
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <br>
+    <br>
+    <br>
+    
+  </div>

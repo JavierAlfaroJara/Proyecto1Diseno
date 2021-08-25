@@ -20,11 +20,10 @@ export class GeneralInfoComponent implements OnInit {
 
   constructor(
     private audioDB: AudioDBService
-  ) {this.search = "metallica" }
+  ) {this.search = "lady gaga" }
 
   ngOnInit(): void {
     this.audioDB.getArtistDetails(this.search).subscribe((response)=>{
-      console.log(response);
       this.imagenLink = response.artists[0].strArtistLogo;
       this.nombre = response.artists[0].strArtist;
       this.estilo = response.artists[0].strGenre;
