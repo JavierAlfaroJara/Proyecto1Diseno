@@ -21,6 +21,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 /*Componentes  */
@@ -32,6 +35,7 @@ import { HomeComponent } from './Components/info/home/home.component';
 import { GeneralInfoComponent } from './Components/info/general-info/general-info.component';
 import { FotosComponent } from './Components/info/fotos/fotos.component';
 import { DiscografiaComponent } from './Components/info/discografia/discografia.component';
+import { DialogoCancionesComponent } from './Components/dialogo-canciones/dialogo-canciones.component';
 
 
 
@@ -44,6 +48,7 @@ import { DiscografiaComponent } from './Components/info/discografia/discografia.
     GeneralInfoComponent,
     FotosComponent,
     DiscografiaComponent,
+    DialogoCancionesComponent,
 
   ],
   imports: [
@@ -60,6 +65,9 @@ import { DiscografiaComponent } from './Components/info/discografia/discografia.
     MatCardModule,
     MatMenuModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatDialogModule,
+    MatPaginatorModule,
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
