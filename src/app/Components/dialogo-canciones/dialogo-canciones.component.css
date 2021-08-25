@@ -1,0 +1,9 @@
+#div1 {
+    overflow-y:scroll;
+    height:600px;
+    width:500px;
+}
+#div1 table {
+   width:500px;
+   background-color:lightgray;
+}

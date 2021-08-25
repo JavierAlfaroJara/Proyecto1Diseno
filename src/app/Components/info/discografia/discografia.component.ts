@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AudioDBService } from 'src/app/services/audioDb-service/audio-db.service';
+import { DialogoCancionesComponent } from '../../dialogo-canciones/dialogo-canciones.component';
 
 @Component({
   selector: 'app-discografia',
@@ -28,8 +29,15 @@ export class DiscografiaComponent implements AfterViewInit {
     this.getAlbums();
   }
 
-  openDialogInfo(albumId: number){
+  openDialogInfo(albumId: number): void{
+
     console.log(albumId)
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '550px';
+    dialogConfig.data = {
+      idAlbum: +albumId,
+    }
+    const dialogRef = this.dialog.open(DialogoCancionesComponent, dialogConfig);
   }
 
   getAlbums(){
