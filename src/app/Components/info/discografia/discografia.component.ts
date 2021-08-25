@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AudioDBService } from 'src/app/services/audioDb-service/audio-db.service';
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-discografia',
@@ -15,16 +16,19 @@ export class DiscografiaComponent implements AfterViewInit {
   displayedColumns: string[] = ['nombre', 'anno', 'genero', 'actions'];
   ALBUM_DATA : album[] = [];
   albumes : album[] = [];
-  search = 111236
+  search = ""
 
   dataSource = new MatTableDataSource<album>(this.ALBUM_DATA);
 
   constructor(
     private audioDB: AudioDBService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private cookie: CookieService 
   ) { }
 
   ngAfterViewInit(): void {
+    let Data = this.cookie.get("data").split("%")
+    this.search = Data[0]
     this.getAlbums();
   }
 
@@ -33,6 +37,7 @@ export class DiscografiaComponent implements AfterViewInit {
   }
 
   getAlbums(){
+    console.log(this.search)
     this.audioDB.getAllAbums(this.search).subscribe((response)=>
     {
       let temp:album[] = []

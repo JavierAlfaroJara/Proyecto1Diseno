@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AudioDBService } from 'src/app/services/audioDb-service/audio-db.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-general-info',
@@ -19,10 +20,13 @@ export class GeneralInfoComponent implements OnInit {
   search = ""
 
   constructor(
-    private audioDB: AudioDBService
-  ) {this.search = "lady gaga" }
-
+    private audioDB: AudioDBService,
+    private cookie: CookieService
+  ) { let Data = this.cookie.get("data").split("%")
+      this.search = Data[1]  }
   ngOnInit(): void {
+    
+
     this.audioDB.getArtistDetails(this.search).subscribe((response)=>{
       this.imagenLink = response.artists[0].strArtistLogo;
       this.nombre = response.artists[0].strArtist;
@@ -39,6 +43,10 @@ export class GeneralInfoComponent implements OnInit {
       this.annoFormacion = response.artists[0].intFormedYear;
       this.about = response.artists[0].strBiographyEN;
     });
+
+    
+
+    
   }
 
 }

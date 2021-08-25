@@ -1,7 +1,8 @@
 /** Angular */
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 /** Alertas */
 import Swal from 'sweetalert2';
@@ -18,9 +19,12 @@ import { AudioDBService } from 'src/app/services/audioDb-service/audio-db.servic
 })
 export class MainComponent implements OnInit {
   search = ""; 
+  data=[]
 
   constructor(
-    private audioDB: AudioDBService
+    private audioDB: AudioDBService,
+    private cookie: CookieService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,7 +34,7 @@ export class MainComponent implements OnInit {
   searchArtist(){
     try{
       this.audioDB.getArtistDetails(this.search).subscribe((response)=>{
-        console.log(response)
+        this.cookie.set("data",response.artists[0].idArtist + "%" + this.search);
       });
     }catch(error){
       Swal.fire({
@@ -40,6 +44,14 @@ export class MainComponent implements OnInit {
         confirmButtonText: 'coll'
       })
     }
+    setTimeout(() => {
+      this.router.navigateByUrl('/info')
+      
+    },1000)
     
+
+    
+
+
   }
 }
